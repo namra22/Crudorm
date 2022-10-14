@@ -12,6 +12,12 @@ class controllerCategory extends Controller
         return view('categories.list',['categories'=>$categories]);
 
     }
+    
+    public function view(){
+        $categories=Category::get();
+        return view('categories.view',['categories'=>$categories]);
+
+    }
     public function create(){
         return view('categories.new');
     }
