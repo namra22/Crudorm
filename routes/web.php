@@ -21,7 +21,8 @@ Route::get('/category-edit/{id}', [controllerCategory::class,'edit']);
 Route::put('/category-update/{id}', [controllerCategory::class,'update']);
 Route::get('/category-delete/{id}', [controllerCategory::class,'delete']);
 });
-Route::get('/category-view', [controllerCategory::class,'view'])->name('category-user');
+Route::get('/category-view', [controllerCategory::class,'view'])->name('category-user')->middleware('can:User');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

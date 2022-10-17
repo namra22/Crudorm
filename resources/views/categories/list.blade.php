@@ -21,9 +21,10 @@
         <td>{{ $category->Title}}</td>
         <td>{{$category->Price}}</td>
         <td><img src="images/{{$category->Image}}" alt="img" width="100px" height="100px"> </td>
-        <td><a href="/category-edit/{{ $category->id }}" class="btn btn-sm btn-info">Edit</a>
-        <td><a href="/category-view" class="btn btn-sm btn-info">View</a>
-        <a href="/category-delete/{{ $category->id }}" class="btn btn-sm btn-danger">Delete</a>
+        <td> <a href="/category-edit/{{ $category->id }}" class="btn btn-sm btn-info">Edit</a>
+        <a href="/category-view" class="btn btn-sm btn-info">View</a>
+         <a href="/category-delete/{{ $category->id }}" class="btn btn-sm btn-danger">Delete</a> 
+        
     </td>
 </tr>
 @endforeach
